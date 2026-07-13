@@ -26,7 +26,7 @@ export default function Sidebar() {
       transition={{ duration: 0.4 }}
     >
       <div className="sidebar-brand-row">
-        <Logo size={30} />
+        <Logo size={35} />
         <span className="sidebar-brand">InterviewPrep</span>
       </div>
 
