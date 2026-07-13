@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
   // sparse: true so multiple users can have googleId: null without
   // tripping the unique index (Mongo's unique index treats null as a value
   // unless the field is sparse - unlike MySQL, which allows many NULLs).
-  googleId: { type: String, default: null, unique: true, sparse: true },
+  googleId: { type: String, default: null, sparse: true },
   avatarUrl: { type: String, default: null }
 }, { timestamps: true });
 

@@ -24,6 +24,7 @@ exports.signup = async (req, res) => {
     }
 
     const existing = await User.findOne({ email });
+    console.log(existing);
     if (existing) {
       return res.status(409).json({ error: 'An account with this email already exists' });
     }
@@ -31,7 +32,9 @@ exports.signup = async (req, res) => {
     const passwordHash = await bcrypt.hash(password, 12);
     const user = await User.create({ name, email, passwordHash });
 
+    console.log(user)
     const token = signToken(user);
+    console.log(token)
     res.status(201).json({ token, user: sanitizeUser(user) });
   } catch (err) {
     console.error(err);
