@@ -31,7 +31,7 @@
   --aurora-opacity: 1;
   --blob-opacity: 0.4;
   --noise-opacity: 0.035;
-  --btn-text: var(--btn-text);
+  --btn-text: #ffffff;
 }
 
 /* ---------- Theme: light ---------- */
