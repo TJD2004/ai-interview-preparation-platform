@@ -375,7 +375,7 @@ select option {
 }
 .sidebar-brand-row { display: flex; align-items: center; gap: 10px; padding: 0 12px 30px; }
 .sidebar-brand {
-  font-family: var(--font-display); font-weight: 600; font-size: 35px;
+  font-family: var(--font-display); font-weight: 600; font-size: 28px;
   background: linear-gradient(135deg, var(--text), var(--fuchsia-soft));
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
 }
