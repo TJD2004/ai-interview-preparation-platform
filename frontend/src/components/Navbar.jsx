@@ -16,7 +16,7 @@ export default function Navbar() {
       transition={{ duration: 0.5 }}
     >
       <Link to="/" className="brand-row">
-        <Logo size={32} />
+        <Logo size={40} />
         <span className="brand">InterviewPrep</span>
       </Link>
       <div className="nav-links">

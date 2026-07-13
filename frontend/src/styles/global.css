@@ -159,7 +159,7 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.01em; }
 }
 .brand-row { display: flex; align-items: center; gap: 10px; }
 .brand {
-  font-family: var(--font-display); font-weight: 600; font-size: 20px; letter-spacing: -0.01em;
+  font-family: var(--font-display); font-weight: 600; font-size: 30px; letter-spacing: -0.01em;
   background: linear-gradient(135deg, var(--text), var(--fuchsia-soft));
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
 }
@@ -301,7 +301,7 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.01em; }
     linear-gradient(160deg, var(--bg-deep), var(--bg));
   overflow: hidden; padding: 40px;
 }
-.split-brand { position: absolute; top: 28px; left: 32px; display: flex; align-items: center; gap: 9px; font-family: var(--font-display); font-weight: 600; font-size: 18px; z-index: 2; }
+.split-brand { position: absolute; top: 28px; left: 32px; display: flex; align-items: center; gap: 9px; font-family: var(--font-display); font-weight: 600; font-size: 25px; z-index: 2; }
 .split-orb { width: 300px; height: 300px; z-index: 1; animation: floatSlow 7s ease-in-out infinite; }
 .split-tagline { color: var(--text-muted); font-family: var(--font-display); font-size: 18px; margin-top: 18px; z-index: 1; text-align: center; }
 .split-form-side { flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px; }
@@ -375,7 +375,7 @@ select option {
 }
 .sidebar-brand-row { display: flex; align-items: center; gap: 10px; padding: 0 12px 30px; }
 .sidebar-brand {
-  font-family: var(--font-display); font-weight: 600; font-size: 18px;
+  font-family: var(--font-display); font-weight: 600; font-size: 35px;
   background: linear-gradient(135deg, var(--text), var(--fuchsia-soft));
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
 }

@@ -41,7 +41,7 @@ export default function Login() {
     <div className="split-auth">
       <div className="split-panel">
         <div className="bg-blob blob-1" />
-        <Link to="/" className="split-brand"><Logo size={26} /> InterviewPrep</Link>
+        <Link to="/" className="split-brand"><Logo size={32} /> InterviewPrep</Link>
         <motion.div
           className="split-orb"
           initial={{ opacity: 0, scale: 0.85 }}
