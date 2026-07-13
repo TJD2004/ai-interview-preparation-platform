@@ -3,7 +3,7 @@
   "outputDirectory": "dist",
   "installCommand": "npm install",
   "framework": "vite",
-  "rewrite": [
+  "rewrites": [
     {
       "source":"/(.*)",
       "destination":"/index.html"
