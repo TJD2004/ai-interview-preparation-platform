@@ -10,5 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Ping health endpoint
-        run: curl -sf https://YOUR-BACKEND-DOMAIN.onrender.com/api/health || exit 1
- 
+        run: curl -sf https://ai-interview-preparation-platform-1-pn1s.onrender.com/api/health || exit 1
