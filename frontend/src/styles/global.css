@@ -680,3 +680,53 @@ form > button, form > .cta-btn {
   .steps-row, .feature-row { grid-template-columns: 1fr; }
   .ats-grid { grid-template-columns: 1fr; }
 }
+
+/* ---------- Phone-width refinements ---------- */
+@media (max-width: 480px) {
+  .navbar { padding: 14px 16px; }
+  .brand { font-size: 22px; }
+  .nav-links { gap: 12px; font-size: 13px; }
+  .nav-cta, .nav-btn { padding: 7px 12px; font-size: 13px; }
+
+  .hero { padding: 24px 16px 6px; gap: 24px; }
+  .hero-text h1 { font-size: 27px; line-height: 1.2; }
+  .hero-text p { font-size: 15px; }
+  .hero-orb { width: 170px; height: 170px; }
+  .section-title { font-size: 22px; }
+
+  .split-form-side, .split-panel { padding: 20px; }
+  .split-brand { position: static; margin-bottom: 16px; justify-content: center; }
+  .split-orb { width: 130px; height: 130px; }
+  .glass-card { padding: 24px; max-width: 100%; border-radius: 18px; }
+  .glass-card h1 { font-size: 22px; }
+
+  .app-content { padding: 18px 14px; }
+  .content-page h1 { font-size: 21px; }
+  .sidebar { padding: 14px 10px; }
+  .sidebar-nav { overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap; gap: 2px; }
+  .sidebar-link { flex-shrink: 0; padding: 9px 11px; font-size: 13px; }
+  .sidebar-brand-row { padding: 0 8px 0 0; }
+  .sidebar-brand { font-size: 20px; }
+
+  .card { padding: 20px; border-radius: 16px; }
+  .card h2 { font-size: 16px; }
+  .stat-row { gap: 20px; flex-wrap: wrap; }
+  .stat-num { font-size: 26px; }
+
+  .report-header { flex-wrap: wrap; gap: 10px; }
+  .score-badge { font-size: 13px; padding: 7px 14px; }
+  .ats-score-row { flex-wrap: wrap; }
+  .ats-score-circle { width: 72px; height: 72px; }
+
+  .quiz-card { padding: 16px; }
+  .quiz-question { font-size: 14.5px; }
+  .quiz-option { padding: 11px 12px; font-size: 13.5px; }
+
+  .interview-stage { padding: 24px 14px; }
+  .interview-stage .bot-avatar-container { width: 170px; height: 170px; }
+  .stage-question { font-size: 19px; margin: 16px 0 22px; }
+  .stage-controls { flex-direction: column; }
+  .stage-exit { top: 16px; left: 16px; }
+
+  .ai-interview-preview .bot-avatar-container { width: 160px; height: 160px; }
+}
