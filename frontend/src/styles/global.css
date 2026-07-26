@@ -239,6 +239,24 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.01em; }
 .cta-btn:disabled { opacity: 0.55; cursor: not-allowed; transform: none; box-shadow: none; }
 .cta-btn.full { width: 100%; text-align: center; }
 
+.btn-spinner {
+  display: inline-block;
+  width: 14px; height: 14px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: var(--btn-text);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin-right: 8px;
+  vertical-align: -2px;
+}
+.google-loading-btn {
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0.7; cursor: not-allowed;
+}
+.loading-hint {
+  color: var(--text-muted); font-size: 13px; margin: -6px 0 12px;
+}
+
 .cta-btn::after, .mic-btn::after, .nav-cta::after {
   content: ''; position: absolute; inset: 0; border-radius: inherit;
   background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, transparent 70%);

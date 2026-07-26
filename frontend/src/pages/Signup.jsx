@@ -12,29 +12,34 @@ export default function Signup() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
   const { login } = useAuth();
   const navigate = useNavigate();
 
   async function handleSubmit(e) {
     e.preventDefault();
     setError('');
+    setLoading(true);
     try {
       const res = await client.post('/auth/signup', { name, email, password });
       login(res.data.token, res.data.user);
       navigate('/dashboard');
     } catch (err) {
       setError(err.response?.data?.error || 'Signup failed');
+      setLoading(false);
     }
   }
 
   async function handleGoogleSuccess(credentialResponse) {
     setError('');
+    setLoading(true);
     try {
       const res = await client.post('/auth/google', { credential: credentialResponse.credential });
       login(res.data.token, res.data.user);
       navigate('/dashboard');
     } catch (err) {
       setError('Google sign-in failed');
+      setLoading(false);
     }
   }
 
@@ -65,21 +70,40 @@ export default function Signup() {
         <motion.div className="glass-card" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }}>
           <h1>Create your account</h1>
           {error && <p className="error-text">{error}</p>}
+          {loading && !error && (
+            <p className="loading-hint">Creating your account — this can take up to a minute on first load...</p>
+          )}
 
           <form onSubmit={handleSubmit}>
             <label>Name</label>
-            <input type="text" value={name} onChange={e => setName(e.target.value)} required />
+            <input type="text" value={name} onChange={e => setName(e.target.value)} disabled={loading} required />
             <label>Email</label>
-            <input type="email" value={email} onChange={e => setEmail(e.target.value)} required />
+            <input type="email" value={email} onChange={e => setEmail(e.target.value)} disabled={loading} required />
             <label>Password</label>
-            <input type="password" value={password} onChange={e => setPassword(e.target.value)} minLength={6} required />
-            <button type="submit" className="cta-btn full">Sign up</button>
+            <input type="password" value={password} onChange={e => setPassword(e.target.value)} disabled={loading} minLength={6} required />
+            <button type="submit" className="cta-btn full" disabled={loading}>
+              {loading ? (
+                <>
+                  <span className="btn-spinner" />
+                  Signing up...
+                </>
+              ) : (
+                'Sign up'
+              )}
+            </button>
           </form>
 
           <div className="divider"><span>or</span></div>
 
           <div className="google-btn-wrap">
-            <GoogleLogin onSuccess={handleGoogleSuccess} onError={() => setError('Google sign-in failed')} theme="filled_black" shape="pill" />
+            {loading ? (
+              <div className="cta-btn full google-loading-btn" aria-disabled="true">
+                <span className="btn-spinner" />
+                Signing up...
+              </div>
+            ) : (
+              <GoogleLogin onSuccess={handleGoogleSuccess} onError={() => setError('Google sign-in failed')} theme="filled_black" shape="pill" />
+            )}
           </div>
 
           <p className="switch-link">Already have an account? <Link to="/login">Log in</Link></p>
